@@ -1,6 +1,8 @@
 export const home = (req, res) => res.render("home");
 
-export const application = (req, res) => {
-  console.log(req);
+export const getApplication = (req, res) => res.render("applicationCheck");
+
+export const postApplication = (req, res) => {
+  console.log(req.body);
   res.redirect("/");
 };

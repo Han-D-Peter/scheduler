@@ -1,10 +1,12 @@
 import express from "express";
-import { home, application } from "./movieController";
+import { home, getApplication, postApplication } from "./movieController";
 
 const movieRouter = express.Router();
 
-movieRouter.post("/application", application);
+movieRouter.get("/application", getApplication);
+movieRouter.post("/application", postApplication);
 movieRouter.get("/", home);
+
 // Add your magic here!
 
 export default movieRouter;
