@@ -1,0 +1,16 @@
+.schedule_list
+            
+            span 등록일: #{createDate}
+            br
+            span 시작: #{startDate}, #{contentDetail.time_start.hour}: #{contentDetail.time_start.minute}
+            br
+            span 종료: #{endDate}, #{contentDetail.time_end.hour}: #{contentDetail.time_end.minute}
+            br
+            span 장소: #{contentDetail.location}     
+            br
+                
+            a(href=`/delete/${contentDetail.id}` )         
+                span 삭제        
+            a(href=`/modify/${contentDetail.id}` )
+                span 수정
+            br

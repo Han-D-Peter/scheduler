@@ -1,0 +1,35 @@
+h1 Edit Schedule
+
+form(action=`/modify/${contentDetail.id}`, method="POST")
+    input(type="date" name="date" id="input_date" placeholder="날짜" required="true" value=`${contentDetail.date}`)
+    select(name="location" value=`${contentDetail.location}`)
+        option(value="101호") 101호
+        option(value="102호") 102호
+        option(value="103호") 103호
+        option(value="시제품제작실") 시제품제작실
+        option(value="버추얼라이브러리") 버추얼라이브러리
+        option(value="종합제작스튜디오") 종합제작스튜디오
+        option(value="편집스튜디오") 편집스튜디오
+        option(value="그래픽스튜디오") 그래픽스튜디오
+        option(value="사운드스튜디오") 사운드스튜디오
+        option(value="2층프로젝트공간") 2층프로젝트공간
+        option(value="301호") 301호
+        option(value="302호") 302호
+        option(value="303호") 303호
+        option(value="대강의실") 대강의실
+        option(value="305호") 305호
+        option(value="306호") 306호
+        option(value="307호") 307호
+        option(value="309호") 309호
+        option(value="3층프로젝트공간") 3층프로젝트공간
+    select(name="category" value=`${contentDetail.category}`)
+        option(value="회의") 회의
+        option(value="행사") 행사
+        option(value="교육") 교육
+    input(type="text" name="content" id="input_content" placeholder="행사명" required="true" value=`${contentDetail.content}`)
+
+    input(type="date" name="time_start" id="input_content" placeholder="시작시간" required="true" value=`${contentDetail.time_start}`)
+    input(type="date" name="time_end" id="input_content" placeholder="종료시간" required="true" value=`${contentDetail.time_end}`)
+    input(type="text" name="name_maker" id="input_content" placeholder="신청자" required="true" value=`${contentDetail.name_maker}`)
+    input(type="number" name="user_count" id="input_content" placeholder="사용자수" required="true" min="0" value=`${contentDetail.user_count}`)
+    input(type="submit", value="submit")

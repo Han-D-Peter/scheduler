@@ -1,4 +1,18 @@
 h1 hello!
 
 a(href="/application")
-    span link
+    span 등록
+
+
+.home-schedule
+    each item in schedules
+        .schedule_list
+            a(href=`/view/${item.id}`)
+                span #{item.location}  
+                
+                span #{item.time_start.date.getFullYear()}-#{item.time_start.date.getMonth()}-#{item.time_start.date.getDate()},  #{item.time_start.hour}:#{item.time_start.minuete} ~ #{item.time_end.date.getFullYear()}-#{item.time_end.date.getMonth()}-#{item.time_end.date.getDate()},  #{item.time_end.hour}:#{item.time_end.minuete}  
+                
+                span #{item.content}                        
+            a(href=`/delete/${item.id}` )
+                span 삭제
+            br
