@@ -15,7 +15,7 @@
     "helmet": "^3.22.0",
     "mongoose": "^5.5.15",
     "prettier": "^2.0.2",
-    "pug": "2.0.3"
+    "pug": "3.0.1"
   },
   "scripts": {
     "start": "nodemon --exec babel-node index.js --delay 2"
